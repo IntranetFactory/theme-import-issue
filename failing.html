@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="../webcomponentsjs/webcomponents-lite.js" charset="utf-8"></script>
+  <link rel="import" href="../polymer/polymer.html">
+  <link rel="import" href="my-theme.html">
+</head>
+
+<body>
+
+  my-theme.html changed the checkbox color from indigo to red:  
+
+  <script>
+    window.addEventListener('WebComponentsReady', function (e) {
+
+      Polymer.Base.importHref('../paper-checkbox/paper-checkbox.html', function (e) {
+        var cb = document.createElement('paper-checkbox');
+        cb.checked = true;
+        document.body.appendChild(cb);
+
+      });
+    });
+  </script>
+</body>
+
+</html>
